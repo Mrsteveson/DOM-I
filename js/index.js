@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Code Starts Here ------------------------------------>
-// Images
+// Images Section
 
 document.getElementById('logo-img').src = 'img/logo.png';
 document.getElementById('cta-img').src = 'img/header-img.png';
@@ -118,7 +118,7 @@ footP = document.getElementById('foot');
 footP.querySelector('p').innerHTML = siteContent["footer"]["copyright"];
 
 
-//Header - Nav
+//Header - Nav Section
 
 const navInfo = siteContent['nav'];
 const headerNav = document.querySelectorAll('a');
@@ -127,6 +127,7 @@ headerNav.forEach(function(item, i){
   item.textContent = navInfo[`nav-item-${i + 1 }`];
 });
 
+// New Nav Elements and Green-Color Styling
 
 const newATagPatrick = document.createElement('a');
 newATagPatrick.innerHTML = 'Patrick';
@@ -166,8 +167,10 @@ h1Style.forEach(function(currentValue){
   currentValue.style.fontStyle = 'italic';
 });
 
-const contBg = document.querySelector('p');
 
-contBg.forEach(function(currentValue){
-  currentValue.style['background'] = "pink";
-});
+// // 
+// const contBg = document.querySelector('p');
+
+// contBg.forEach(function(currentValue){
+//   currentValue.style['background'] = "pink";
+// });
