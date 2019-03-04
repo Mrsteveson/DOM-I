@@ -44,14 +44,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Code Starts Here ------------------------------------>
-
+// Images
 
 document.getElementById('logo-img').src = 'img/logo.png';
 document.getElementById('cta-img').src = 'img/header-img.png';
 document.getElementById("middle-img").src = 'img/mid-page-accent.jpg';
 
 
-//CTA
+//Button Section
 
 let h1Tag = document.querySelector('h1')
 h1Tag.innerHTML =  siteContent.cta.h1;
@@ -61,7 +61,7 @@ let btnInfo = document.querySelector('button');
 btnInfo.innerHTML = siteContent.cta.button;
 
 
-//Main Content
+//Main Content Section
 
 let topContH4 = document.getElementsByClassName("text-content")
 
@@ -87,9 +87,7 @@ document.getElementById('p-4').innerHTML = siteContent["main-content"]["product-
 document.getElementById('p-5').innerHTML = siteContent["main-content"]["vision-content"];
 
 
-
-
-//Contact
+//Contact Section
 
 let contactInfo = document.getElementsByClassName("contact");
 let contactP;
@@ -110,8 +108,8 @@ document.getElementById('contactP2').innerHTML = siteContent["contact"]["phone"]
 document.getElementById('contactP3').innerHTML = siteContent["contact"]["email"];
 
 
+//Footer Section
 
-//Footer
 let footP = document.querySelector('footer');
 footP.id = "foot";
 console.log(footP.id)
@@ -147,8 +145,29 @@ navTags.forEach(function(currentValue){
 });
 
 
+// Various Styling Shenanigans
+
 const allText = document.querySelectorAll('p');
 
 allText.forEach(function(currentValue) {
   currentValue.style.color = 'purple';
+  currentValue.style.fontWeight = 'bold';
+});
+
+const aDecor = document.querySelectorAll('a');
+
+aDecor.forEach(function(currentValue) {
+  currentValue.style.textDecoration = 'none';
+});
+
+const h1Style = document.querySelectorAll('h1');
+
+h1Style.forEach(function(currentValue){
+  currentValue.style.fontStyle = 'italic';
+});
+
+const contBg = document.querySelector('p');
+
+contBg.forEach(function(currentValue){
+  currentValue.style['background'] = "pink";
 });
